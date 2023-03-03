@@ -1,0 +1,18 @@
+=======Task3==========
+
+a) All orders for more than $1000.
+b) Names and cities of all salespeople in London with commission above 0.12
+==>SELECT *from salesperson WHERE city="London" AND COMM>0.12;
+
+c) All salespeople either in Barcelona or in London
+==>SELECT *from salesperson WHERE city="London" or CITY="Barcelona";
+
+a) All salespeople with commission between 0.10 and 0.12. (Boundary 
+valuesshould be excluded).
+==>SELECT * FROM `salesperson` WHERE COMM BETWEEN 0.10 AND 0.12;
+
+
+b) All customers excluding those with rating <= 100 unless they are located
+inRome
+SELECT * FROM `customer` WHERE RATING BETWEEN 0 AND 100 AND CITY="Rome";
+

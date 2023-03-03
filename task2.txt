@@ -1,0 +1,36 @@
+=====task 2======
+a) Get First_Name from employee table using Tom name “Employee Name”
+==>SELECT * FROM `employee` WHERE first_name="Tom";
+
+b) Get FIRST_NAME, Joining Date, and Salary from employee table.
+==>select  first_name,joining_date,salary FROM employee;
+
+c) Get all employee details from the employee table order by First_Name
+Ascending and Salary descending?
+==>SELECT *FROM employee ORDER BY first_name ASC ;
+==>SELECT *FROM employee ORDER BY salary DESC;
+
+
+d) Get employee details from employee table whose first name contains ‘J’.
+==>Select * from EMPLOYEE where FIRST_NAME like 'J%'
+
+e) Get department wise maximum salary from employee table order by
+salaryascending?
+SELECT employee_id, first_name, max(salary) FROM employee WHERE department="Banking";
+SELECT employee_id, first_name, max(salary) FROM employee WHERE department="Insurance";
+SELECT employee_id, first_name, max(salary) FROM employee WHERE department="services";
+==Department wise ascending===
+SELECT *FROM employee WHERE department="Insurance" ORDER BY salary ;
+SELECT *FROM employee WHERE department="Banking" ORDER BY salary ;
+SELECT *FROM employee WHERE department="Services" ORDER BY salary ;
+
+f) Select first_name, incentive amount from employee and incentives table
+forthose employees who have incentives and incentive amount greater than
+3000
+==>SELECT employee.first_name,incentive.Incentive_amount FROM employee INNER JOIN incentive ON employee.employee_id=incentive.employee_ref_id AND incentive.Incentive_amount>3000;
+
+
+
+g) Create After Insert trigger on Employee table which insert records in
+viewtable
+==>
